@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Raleway&display=swap');
+
+/* FP, FS: Fonte primaria, secundaria*/
+/* CP, CS, CT: Cor primaria, secundaria, terciaria */
+:root {
+    --f-p: 'Nunito Sans', sans-serif;
+    --f-s: 'Raleway', sans-serif;
+
+    --c-p: #252A34;
+    --c-s: #FF2E63;
+    --c-t: #08D9D6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--c-p);
+    color: var(--c-s);
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
+
+/* Alteram o <header> */
+
+.cabecalho {
+    padding: 3% 0% 0% 15%;
+}
+
+.cabecalho_menu {
+    display: flex;
+    gap: 120px;
+}
+
+.cabecalho_menu_link:hover {
+    color: blue;
+}
+
+.cabecalho_menu_link:active {
+    color: pink;
+}
+
+.cabecalho_menu_link {
+    color: var(--c-t);
+    font-family:var(--f-p);
+    font-size: 3rem;
+    font-weight: 200;
+    text-decoration: none;
+}
+
+/* Alteram o <main> */
+
+.apresentacao {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 15%;
+}
+
+.apresentacao_conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: auto;
+}
+
+.apresentacao_conteudo_titulo {
+    font-size: 4rem;
+    font-family: var(--f-s);
+    font-weight: normal;
+}
+
+.apresentacao_conteudo_paragrafo {
+    font-size: 1.25rem;
+    font-family: var(--f-p);
+}
+
+.apresentacao_conteudo_fotos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.apresentacao_conteudo_fotos img {
+    width: 20%;
+}
+
+.apresentacao_imagem {
+    width: 30%;
+}
+
+/* Alteram o <footer> */
+
+.rodape {
+    background-color: var(--c-s);
+    color: var(--c-t);
+    font-family: var(--f-p);
+    font-size: 2rem;
+    font-weight: normal;
+    text-align: center;
+    padding: 10px;
+  }
+
+/* Media Query. Responsividade */
+@media (min-width: 375px) and (max-width: 1200px) {
+    .cabecalho {
+        padding: 7%;
+    }
+
+    .cabecalho_menu {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+    }
+
+    .apresentacao_conteudo {
+        width: auto;
+    }
+
+    .rodape {
+        clear: both;
+        position: static;
+        width: 100%;
+    }
+}
